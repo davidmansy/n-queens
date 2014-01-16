@@ -148,7 +148,9 @@
 
       for (var i = 0; i < size && majorDiagonalColumnIndexAtFirstRow < size; i++) {
         var row = this.get(i);
-        count += row[majorDiagonalColumnIndexAtFirstRow];
+        if(row[majorDiagonalColumnIndexAtFirstRow]) {
+          count += row[majorDiagonalColumnIndexAtFirstRow];
+        }
         majorDiagonalColumnIndexAtFirstRow++;
       }
 
@@ -183,7 +185,9 @@
 
       for (var i = 0; i < size && minorDiagonalColumnIndexAtFirstRow >= 0; i++) {
         var row = this.get(i);
-        count += row[minorDiagonalColumnIndexAtFirstRow];
+        if(row[minorDiagonalColumnIndexAtFirstRow]) {
+          count += row[minorDiagonalColumnIndexAtFirstRow];
+        }
         minorDiagonalColumnIndexAtFirstRow--;
       }
 
