@@ -92,7 +92,6 @@
     // test if any rows on this board contain conflicts
     hasAnyRowConflicts: function(){
       var size = this.get('n'); //Gives you how many rows/columns
-      console.log(size);
 
       for (var i = 0; i < size; i++) {
         if(this.hasRowConflictAt(i)) { //If at leat one row has a conflit, get out
@@ -153,7 +152,6 @@
         }
         majorDiagonalColumnIndexAtFirstRow++;
       }
-
 
       return count > 1; // fixme
     },
